@@ -71,7 +71,7 @@ const AddProperty = ({ token, history }) => {
           console.log(res.data);
           if (res.data.success) {
             toast.success("Property added successfully!");
-            history.push("/all-properties");
+            history.push("/admin/all-properties");
           } else console.log("Error uploading images, please try again!");
         })
         .catch((err) => console.log(err));

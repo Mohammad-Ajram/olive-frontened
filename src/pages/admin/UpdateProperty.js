@@ -108,7 +108,7 @@ const UpdateProperty = ({ token, history }) => {
       .then((res) => {
         if (res.data.success) {
           toast.success("Property successfully updated!");
-          history.push("/all-properties");
+          history.push("/admin/all-properties");
         }
       })
       .catch((err) => console.log(err));
