@@ -5,7 +5,9 @@ const AboutUs = () => {
   return (
     <>
       <div className="about-cover">
-        <img className="logo-image" src={Logo} alt="logo"></img>
+        <div className="image-container">
+          <img className="logo-image" src={Logo} alt="logo"></img>
+        </div>
         <h2 className="about-heading text-center">Olive Doon Associates</h2>
       </div>
       <h2 className="section-title mt-5">About Us</h2>

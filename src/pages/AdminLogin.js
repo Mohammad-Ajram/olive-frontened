@@ -12,7 +12,7 @@ const AdminLogin = ({ setToken, history }) => {
       .then((res) => {
         setToken(res.data);
         sessionStorage.setItem("token", res.data);
-        history.push("/all-properties");
+        history.push("/admin/all-properties");
       })
       .catch((err) => {
         console.log("error", err.response.data);

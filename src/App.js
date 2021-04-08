@@ -4,7 +4,6 @@ import Footer from "./components/nav/Footer";
 import { Route, Switch } from "react-router-dom";
 import Home from "./pages/Home.js";
 import AdminLogin from "./pages/AdminLogin";
-import AdminDashboard from "./pages/AdminDashboard";
 import AddProperty from "./pages/admin/AddProperty";
 import UpdateProperty from "./pages/admin/UpdateProperty";
 import AllProperties from "./pages/admin/AllProperties";
@@ -21,6 +20,8 @@ import TopProperties from "./pages/TopProperties";
 import ResidentialProperties from "./pages/ResidentialProperties";
 import CommercialProperties from "./pages/CommercialProperties";
 import AgriculturalProperties from "./pages/AgriculturalProperties";
+import "./index.css";
+import NoMatch from "./pages/NoMatch";
 
 function App() {
   const [token, setToken] = useState("");
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div className="App">
+      {token}
       <ToastContainer />
       <ScrollToTop />
       <header className="App-header">
@@ -42,24 +44,20 @@ function App() {
           path="/admin-login"
           render={(props) => <AdminLogin {...props} setToken={setToken} />}
         />
+
         <Route
           exact
-          path="/admin-dashboard"
-          render={(props) => <AdminDashboard {...props} token={token} />}
-        />
-        <Route
-          exact
-          path="/add-property"
+          path="/admin/add-property"
           render={(props) => <AddProperty {...props} token={token} />}
         />
         <Route
           exact
-          path="/all-properties"
+          path="/admin/all-properties"
           render={(props) => <AllProperties {...props} token={token} />}
         />
         <Route
           exact
-          path="/update-property/:id"
+          path="/admin/update-property/:id"
           render={(props) => <UpdateProperty {...props} token={token} />}
         />
         <Route exact path="/about-us" component={AboutUs} />
@@ -87,6 +85,7 @@ function App() {
           path="/agricultural-properties"
           component={AgriculturalProperties}
         />
+        <Route component={NoMatch} />
       </Switch>
       <Footer />
     </div>

@@ -1,16 +1,19 @@
 import Logo from "../../images/logo.jpeg";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+
 const Topnav = ({ token, setToken }) => {
+  const history = useHistory();
   const handleLogout = () => {
     setToken("");
     sessionStorage.clear();
+    history.push("/admin-login");
   };
   return (
     <nav className="navbar navbar-expand-md">
-      <a className="navbar-brand" href="/">
+      <Link className="navbar-brand" to="/">
         <img src={Logo} alt="logo" style={{ width: "40px" }} /> Olive Doon
         Associates
-      </a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"

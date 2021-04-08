@@ -1,4 +1,4 @@
-import House from "../../images/house.png";
+import House from "../../images/default.png";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { toast } from "react-toastify";
 import { removeProperty, updateProperty } from "../../functions/admin";
@@ -61,7 +61,7 @@ const AdminPropertyCard = ({ property, loadProperties, token }) => {
                   {" "}
                   <button className="btn btn-block my-btn-primary">
                     <Link
-                      to={`/update-property/${property._id}`}
+                      to={`/admin/update-property/${property._id}`}
                       className="p-card-link"
                       style={{ width: "100%" }}
                     >
