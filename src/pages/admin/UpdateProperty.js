@@ -8,6 +8,7 @@ import Resizer from "react-image-file-resizer";
 import { toast } from "react-toastify";
 
 const UpdateProperty = ({ token, history }) => {
+  if (!token) history.push("/");
   const [property, setProperty] = useState({});
   const [propertyDetails, setPropertyDetails] = useState({
     title: "",

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -30,6 +31,11 @@ nav a {
 .nav-link:hover,
 a.navbar-brand:hover {
   color: rgb(2, 74, 54);
+}
+@media screen and (max-width: 400px) {
+  .navbar-brand {
+    margin-right: 0px;
+  }
 }
 
 .pointer {
@@ -65,7 +71,7 @@ a.navbar-brand:hover {
   object-fit: cover;
 }
 .cover-title {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: white;
   font-size: 40px;
   font-weight: 100;
@@ -99,6 +105,16 @@ a.navbar-brand:hover {
   background: rgb(2, 74, 54);
   color: #ffffff;
 }
+.my-btn-primary:focus {
+  background: rgb(2, 74, 54);
+  color: #ffffff;
+}
+
+.my-btn-primary:active {
+  background: rgb(2, 74, 54);
+  color: #ffffff;
+}
+
 @media screen and (max-width: 400px) {
   .cover-content {
     left: 50%;
@@ -139,7 +155,7 @@ a.navbar-brand:hover {
 .property-card-image {
   width: 100%;
   height: 360px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .property-card-section {
   display: flex;
@@ -203,6 +219,10 @@ a.navbar-brand:hover {
 .p-card-cta {
   margin: 30px 0;
 }
+.p-card-btn-container {
+  position: relative;
+}
+
 .vertical-line {
   background: #c4c4c4;
   width: 2px;
@@ -269,6 +289,17 @@ a.navbar-brand:hover {
 
   color: #525252;
 }
+@media screen and (max-width: 400px) {
+  .property-card {
+    padding-bottom: 100px;
+  }
+  .p-card-cta {
+    margin: 30px 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
 /*---------Designing form------*/
 .form-title {
   font-family: Poppins;
@@ -318,6 +349,18 @@ a.navbar-brand:hover {
 }
 .ant-modal-body {
   padding: 0px;
+}
+.modal-container {
+  padding: 0px 24px 24px 24px;
+}
+.ant-modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #024a36;
+}
+.modal-text {
+  font-family: "Montserrat" sans-serif;
+  font-weight: 600;
 }
 /* ----------Designing Avatar-------------------*/
 .avatar {

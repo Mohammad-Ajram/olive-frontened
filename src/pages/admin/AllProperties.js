@@ -3,7 +3,8 @@ import AdminPropertyCard from "../../components/cards/AdminPropertyCard";
 import { useState, useEffect } from "react";
 import { getProperties } from "../../functions/admin";
 
-const AllProperties = ({ token }) => {
+const AllProperties = ({ token, history }) => {
+  if (!token) history.push("/");
   const [properties, setProperties] = useState([]);
 
   const loadProperties = () =>

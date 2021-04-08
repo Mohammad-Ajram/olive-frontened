@@ -2,6 +2,7 @@ import PropertyCard from "../components/cards/PropertyCard";
 import { useState, useEffect } from "react";
 import { getPropertiesByType } from "../functions/admin";
 import { Link } from "react-router-dom";
+import Logo from "../images/logo.jpeg";
 const Home = ({ history }) => {
   const [topProperties, setTopProperties] = useState([]);
   const [resProperties, setResProperties] = useState([]);
