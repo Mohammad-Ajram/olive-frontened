@@ -41,7 +41,7 @@ const RentSellProperty = () => {
       <p className="about-text">You can also reach out to us via email</p>
       <div className="container">
         <img src={Mail} alt="mail icon" className="s-icon" />
-        <span className="contact-tag u">olivedoonassociates4@gmail.com</span>
+        <span className="contact-tag u">olivedoonassociates@gmail.com</span>
         <br />
         <br />
       </div>
