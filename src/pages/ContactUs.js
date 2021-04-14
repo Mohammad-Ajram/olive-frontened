@@ -24,7 +24,7 @@ const ContactUs = () => {
       <h2 className="section-title mt-5">Contact Us</h2>
       <div className="container">
         <img src={Mail} alt="mail icon" className="s-icon" />
-        <span className="contact-tag u">olivedoonassociates4@gmail.com</span>
+        <span className="contact-tag u">olivedoonassociates@gmail.com</span>
         <br />
         <br />
         <img src={Whatsapp} alt="mail icon" className="s-icon" />

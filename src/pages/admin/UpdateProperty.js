@@ -122,7 +122,7 @@ const UpdateProperty = ({ token, history }) => {
         720,
         720,
         "JPEG",
-        100,
+        70,
         0,
         (uri) => {
           console.log("uri", uri);
